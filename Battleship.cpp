@@ -53,12 +53,15 @@ int main() {
     // Main Loop
     while (!Sink) {
         // Display Location options
-        cout << "Location (row[1-" << N << "] column[1-" << N << "]): ";
+        cout << "Guess a location (row[1-" << N << "] column[1-" << N << "]): ";
 
         int row; // Initialize Variables
         int col;
         cin >> row; // User Input
         cin >> col;
+
+        Guesses += 1; // Guess counter increases by 1 each time a user inputs
+        // * Even if the input is invalid
 
         // If input is negative
         if ((row < 1) || (col < 1)) {
@@ -73,9 +76,6 @@ int main() {
             cout << endl;
             continue;
         }
-
-        Guesses += 1; // Guess counter increases by 1 each time a user inputs
-                      // * Only if the input is valid
 
         if (row == ship_row && col == ship_col) {     // If the user hits the battleship
             MapArray[row - 1][col - 1] = "O";         // Location turns to O

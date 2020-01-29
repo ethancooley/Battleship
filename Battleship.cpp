@@ -65,14 +65,14 @@ int main() {
 
         // If input is negative
         if ((row < 1) || (col < 1)) {
-            cout << "Location must be positive." << endl;   // Sanitize input
+            cout << "Invalid Position!" << endl;   // Sanitize input
             cout << endl;
             continue;                                       // Ask again for input
         }
 
         // If position is invalid
         if ((row > N) || (col > N)) {
-            cout << "Invalid Position." << endl;
+            cout << "Invalid Position!" << endl;
             cout << endl;
             continue;
         }
